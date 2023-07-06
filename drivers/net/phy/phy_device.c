@@ -2182,6 +2182,9 @@ int __genphy_config_aneg(struct phy_device *phydev, bool changed)
 {
 	int err;
 
+	/* SOFT RESET */
+	genphy_soft_reset(phydev);
+
 	if (genphy_config_eee_advert(phydev))
 		changed = true;
 

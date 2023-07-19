@@ -158,7 +158,7 @@
 	};
 
 	ov5640: ov5640@3c {
-		compatible = "ovti,ov5640";
+		compatible = "ovti,ov7670";
 		reg = <0x3c>;
 		pinctrl-names = "default";
 		pinctrl-0 = <&pinctrl_csi1 &pinctrl_camera_clock>;
@@ -169,7 +169,7 @@
 		csi_id = <0>;
 		mclk = <24000000>;
 		mclk_source = <0>;
-		status = "disabled";
+		status = "okay";
 		port {
 			ov5640_ep: endpoint {
 				remote-endpoint = <&csi1_ep>;

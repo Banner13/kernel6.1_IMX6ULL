@@ -22,7 +22,7 @@
 	status = "okay";
 };
 
-&ov5640 {
+&ov7670 {
 	status = "okay";
 };
 

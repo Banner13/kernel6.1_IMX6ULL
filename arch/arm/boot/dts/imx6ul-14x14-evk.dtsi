@@ -136,7 +136,6 @@
 	port {
 		csi1_ep: endpoint {
 			remote-endpoint = <&ov7670_ep>;
-			bus-type = <1>;
 		};
 	};
 };
@@ -277,6 +276,7 @@
 		port {
 			ov7670_ep: endpoint {
 				remote-endpoint = <&csi1_ep>;
+				bus-type = <5>;
 			};
 		};
 	};

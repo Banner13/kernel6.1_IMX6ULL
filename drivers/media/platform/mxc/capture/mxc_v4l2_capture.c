@@ -2819,7 +2819,7 @@ static int mxc_v4l2_probe(struct platform_device *pdev)
 		pr_err("ERROR: v4l2 capture: video_register_device failed\n");
 		return -1;
 	}
-	pr_debug("   Video device registered: %s #%d\n",
+	pr_err("   Video device registered: %s #%d\n",
 		 cam->video_dev->name, cam->video_dev->minor);
 
 	if (device_create_file(&cam->video_dev->dev,

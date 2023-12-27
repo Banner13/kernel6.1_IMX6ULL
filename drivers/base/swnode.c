@@ -164,7 +164,7 @@ static int property_entry_read_int_array(const struct property_entry *props,
 {
 	const void *pointer;
 	size_t length;
-printk(KERN_ERR "Error property_entry_read_int_array name = %s\n", name);
+//printk(KERN_ERR "Error property_entry_read_int_array name = %s\n", name);
 	if (!val)
 		return property_entry_count_elems_of_size(props, name,
 							  elem_size);

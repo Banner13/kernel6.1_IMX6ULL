@@ -902,7 +902,7 @@ static int of_fwnode_property_read_int_array(const struct fwnode_handle *fwnode,
 					     size_t nval)
 {
 	const struct device_node *node = to_of_node(fwnode);
-	printk(KERN_ERR "Error OF device_node(%s) name = %s\n", node->name, propname);
+	//printk(KERN_ERR "Error OF device_node(%s) name = %s\n", node->name, propname);
 
 	if (!val)
 		return of_property_count_elems_of_size(node, propname,

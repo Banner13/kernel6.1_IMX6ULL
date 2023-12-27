@@ -1823,7 +1823,7 @@ static int ov7670_parse_dt(struct device *dev,
 	struct fwnode_handle *ep;
 	int ret;
 
-	printk("dev->of_node is %s\n", dev->of_node->name);
+	//printk("dev->of_node is %s\n", dev->of_node->name);
 	if (!fwnode)
 		return -EINVAL;
 
@@ -1905,7 +1905,7 @@ static int ov7670_probe(struct i2c_client *client,
 		else
 			return ret;
 	}
-	printk(KERN_ERR "info->clk is ok\n");
+	//printk(KERN_ERR "info->clk is ok\n");
 
 	ret = ov7670_init_gpio(client, info);
 	if (ret)
@@ -1999,7 +1999,7 @@ static int ov7670_probe(struct i2c_client *client,
 	ret = v4l2_async_register_subdev(&info->sd);
 	if (ret < 0)
 		goto entity_cleanup;
-printk(KERN_ERR "ov7670 init done\n");
+//printk(KERN_ERR "ov7670 init done\n");
 	ov7670_power_off(sd);
 	return 0;
 

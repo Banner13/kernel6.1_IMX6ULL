@@ -1,3 +1,5 @@
+ccflags-y += -DDEBUG
+ccflags-y += -DVERBOSE_DEBUG
 ifeq ($(CONFIG_VIDEO_MXC_IPU_CAMERA),y)
 	obj-$(CONFIG_VIDEO_MXC_CAPTURE) += mxc_v4l2_capture.o
 	obj-$(CONFIG_MXC_IPU_PRP_VF_SDC) += ipu_prp_vf_sdc.o ipu_prp_vf_sdc_bg.o

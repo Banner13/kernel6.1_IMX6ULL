@@ -3,6 +3,8 @@
 # Makefile for the V4L2 core
 #
 
+ccflags-y += -DDEBUG
+ccflags-y += -DVERBOSE_DEBUG
 ccflags-y += -I$(srctree)/drivers/media/dvb-frontends
 ccflags-y += -I$(srctree)/drivers/media/tuners
 

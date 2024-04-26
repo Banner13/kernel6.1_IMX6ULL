@@ -1,0 +1,15 @@
+#
+# u-dma-buf
+#
+
+menuconfig U_DMA_BUF
+	tristate "u-dma-buf(User space mappable DMA Buffer)"
+	depends on OF
+	help
+	  Enable this to allow the u-dma-buf to be built.
+	  u-dma-buf is a linux device driver that allocates contiguous
+	  memory blocks in the kernel space as DMA buffers and
+	  makes them available from the user space.
+
+	  If you don't know what to do here, say N.
+

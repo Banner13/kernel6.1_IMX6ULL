@@ -20,8 +20,36 @@
 		linux,cma {
 			compatible = "shared-dma-pool";
 			reusable;
-			size = <0xa000000>;
+			size = <0x4000000>;
 			linux,cma-default;
+		};
+
+		udma_reserved0: udmabuf@90000000 {
+			compatible = "shared-dma-pool";
+			reusable;
+			size = <0x2000000>;
+			label = "udma_reserved0";
+		};
+
+		udma_reserved1: udmabuf@90400000 {
+			compatible = "shared-dma-pool";
+			reusable;
+			size = <0x2000000>;
+			label = "udma_reserved1";
+		};
+
+		udma_reserved2: udmabuf@90800000 {
+			compatible = "shared-dma-pool";
+			reusable;
+			size = <0x2000000>;
+			label = "udma_reserved2";
+		};
+
+		udma_reserved3: udmabuf@90c00000 {
+			compatible = "shared-dma-pool";
+			reusable;
+			size = <0x2000000>;
+			label = "udma_reserved3";
 		};
 	};
 

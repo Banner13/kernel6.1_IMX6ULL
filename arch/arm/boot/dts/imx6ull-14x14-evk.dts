@@ -26,4 +26,38 @@
 	status = "okay";
 };
 
+/ {
+	udmabuf: udmabuf@0 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "udmabuf0";
+		size = <0x2000000>;
+		memory-region = <&udma_reserved0>;
+		dma-coherent;
+	};
+	udmabuf@1 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "udmabuf1";
+
+		size = <0x2000000>;
+		memory-region = <&udma_reserved1>;
+		dma-coherent;
+	};
+	udmabuf@2 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "udmabuf2";
+
+		size = <0x2000000>;
+		memory-region = <&udma_reserved2>;
+		dma-coherent;
+	};
+	udmabuf@3 {
+		compatible = "ikwzm,u-dma-buf";
+		device-name = "udmabuf3";
+
+		size = <0x2000000>;
+		memory-region = <&udma_reserved3>;
+		dma-coherent;
+	};
+};
+
 /delete-node/ &sim2;

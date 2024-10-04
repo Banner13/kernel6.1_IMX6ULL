@@ -1193,6 +1193,20 @@ static int ov7670_s_frame_interval(struct v4l2_subdev *sd,
 	return info->devtype->set_framerate(sd, tpf);
 }
 
+static int ov7670_s_stream(struct v4l2_subdev *sd, int on)
+{
+	int ret;
+	unsigned char com2;
+
+	ret = ov7670_read(sd, REG_COM2, &com2);
+	if (ret == 0) {
+	   com2 = on ? 0x01 : 0x11;
+	   // com2 = 0x11;
+	   ret = ov7670_write(sd, REG_COM2, com2);
+	}
+	return ret;
+}
+
 
 /*
  * Frame intervals.  Since frame rates are controlled with the clock
@@ -1313,7 +1327,6 @@ static int ov7670_store_cmatrix(struct v4l2_subdev *sd,
 	}
 	return ov7670_write(sd, REG_CMATRIX_SIGN, signbits);
 }
-
 
 /*
  * Hue also requires messing with the color matrix.  It also requires
@@ -1751,6 +1764,7 @@ static const struct v4l2_subdev_core_ops ov7670_core_ops = {
 static const struct v4l2_subdev_video_ops ov7670_video_ops = {
 	.s_frame_interval = ov7670_s_frame_interval,
 	.g_frame_interval = ov7670_g_frame_interval,
+	.s_stream = ov7670_s_stream,
 };
 
 static const struct v4l2_subdev_pad_ops ov7670_pad_ops = {

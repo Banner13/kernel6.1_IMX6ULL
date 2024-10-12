@@ -1,5 +1,4 @@
 # SPDX-License-Identifier: GPL-2.0
-EXTRA_CFLAGS += -DDEBUG
 videobuf2-common-objs := videobuf2-core.o
 videobuf2-common-objs += frame_vector.o
 

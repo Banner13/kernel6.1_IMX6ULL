@@ -405,10 +405,10 @@
 };
 
 &usbotg1 {
-	dr_mode = "otg";
-	pinctrl-names = "default";
-	pinctrl-0 = <&pinctrl_usb_otg1>;
-	status = "okay";
+    dr_mode = "peripheral";
+    pinctrl-names = "default";
+    pinctrl-0 = <&pinctrl_usb_otg1>;
+    status = "okay";
 };
 
 &usbotg2 {

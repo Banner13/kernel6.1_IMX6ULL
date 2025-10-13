@@ -1403,7 +1403,7 @@ static int mx6s_vidioc_enum_fmt_vid_cap(struct file *file, void  *priv,
 	fmt = format_by_mbus(code.code);
 	if (!fmt) {
 		dev_err(csi_dev->dev, "mbus (0x%08x) invalid.\n", code.code);
-		return -EINVAL;
+		// return -EINVAL; ???
 	}
 
 	strlcpy(f->description, fmt->name, sizeof(f->description));
